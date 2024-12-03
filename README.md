@@ -60,11 +60,11 @@ endmodule
 
 ii)FULL SUBTRACTOR
 
-module fs(a,b,bin,difference,borrow);
+module fs(a,b,bin,diff,borr);
 input a,b,bin;
-output difference,borrow;
-assign difference= ((a ^ b)^bin);
-assign borrow= (( ~a & b)|( bin & (~(a ^ b ))));
+output diff,borr;
+assign difference= (a ^ b^bin);
+assign borrow= (( ~a & b)|((~a^b)&bin));
 endmodule
 
 
