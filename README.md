@@ -52,38 +52,50 @@ RegisterNumber:24002206
 i)FULL ADDER
 
 module fa(a,b,cin,sum,carry);
+
 input a,b,cin;
+
 output sum,carry;
+
 assign sum=( (a ^ b)^cin);
+
 assign carry= ( (a & b)| ( cin &(a ^ b )));
+
 endmodule
 
 ii)FULL SUBTRACTOR
 
 module fs(a,b,bin,diff,borr);
+
 input a,b,bin;
+
 output diff,borr;
+
 assign difference= (a ^ b^bin);
+
 assign borrow= (( ~a & b)|((~a^b)&bin));
+
 endmodule
 
 
 **RTL**
 
 Full adder
+
 ![exp4 fa logic gate](https://github.com/user-attachments/assets/596ccbb3-e7c0-45a8-96b4-40aa4c0782d5)
 
 Full subtractor
+
 ![exp4 fs logic gate](https://github.com/user-attachments/assets/e8f4efff-3549-42d3-b9d3-3f8dc382f915)
 
 
 **Output**
+
 Full adder
 
 ![exp4 fa op](https://github.com/user-attachments/assets/d5c5883c-89da-4516-82b8-73a3b7b0f5f1)
 
 Full subtractor
-
 
 ![exp4 fs op](https://github.com/user-attachments/assets/66d7984d-ca91-4d59-b29d-64ac2e676104)
 
